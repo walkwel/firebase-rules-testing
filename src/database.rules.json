@@ -1,0 +1,22 @@
+{
+  "rules": {
+    "users":{
+      ".read":"auth !== null",
+      "$userKey":{
+        ".write": "auth.uid === $userKey"
+      }
+    },
+    "messages":{
+      "$messageKey":{
+        ".write": "!data.exists() && newData.child('owner').val() == auth.uid
+                   ||
+                   data.exists() && data.child('owner').val() == auth.uid"
+      }
+      
+    },
+    "foo": {
+      ".write": true, // a comment
+      ".read": true
+    }
+  }
+}
