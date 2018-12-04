@@ -12,7 +12,7 @@ expect.extend({
   toAllowWrite: targaryen.toAllowWrite
 });
 
-describe("my security rules", function() {
+/*describe("my security rules", function() {
   it("should allow authenticated user to read all data", function() {
     const data = { foo: 1 };
     const user1 = { uid: "user1" };
@@ -117,4 +117,4 @@ describe("User security rules", function() {
     result = database.as(user2).write("/messages/first/message", "fun");
     expect(result.allowed).toEqual(true);
   });
-});
+});*/
