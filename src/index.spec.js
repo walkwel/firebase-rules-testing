@@ -4,7 +4,7 @@ const assert = require("assert");
 const targaryen = require("targaryen/plugins/jest");
 //let rules = require("./database.rules.json");
 // This command allows you put newlines and comments in your rules.
-const rules = targaryen.json.loadSync("src/database.rules.json");
+const rules = targaryen.json.loadSync("./src/database.rules.json");
 //console.log(rules);
 expect.extend({
   toAllowRead: targaryen.toAllowRead,
